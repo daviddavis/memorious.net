@@ -1,0 +1,128 @@
+body {
+  background: url('rice-paper.png');
+}
+div {
+  margin: 10px auto 0;
+  text-align: center;
+}
+#logo {
+  margin: 40px 0 30px;
+  height: 400px;
+}
+h1 {
+  font-family: Lato, Arial, Sans-Serif;
+  font-weight: lighter;
+  font-size: 80pt;
+  letter-spacing: 10px;
+  margin: 1em 0 0.2em 0;
+}
+p {
+  width: 800px;
+  font-family: Neuton, Georgia, Serif;
+  margin: 1em auto;
+  text-align: justify;
+  font-size: 17pt;
+  line-height: 1.4em;
+  letter-spacing: 0.4px;
+  font-weight: 200;
+  color: #333
+}
+a {
+  color: #333;
+  font-size: 18pt;
+  margin-left: 35px;
+}
+.links {
+  text-align: center;
+  margin: 0 auto 1em;
+  padding-right: 30px;
+}
+.links a {
+  font-size: 30pt;
+}
+.links a:first {
+  margin-left: 0;
+}
+img.goodreads {
+  opacity: .85;
+  top: 5px;
+  position: relative;
+  width: 36px;
+}
+
+/* Contact form */
+
+#chdr {
+  margin: 200px auto 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+form {
+  width: 520px;
+  margin: 1em auto;
+  text-align: left;
+}
+
+form label {
+  font-family: Neuton, Georgia, Serif;
+  font-size: 1.5em;
+  display: block;
+  padding: 10px 0;
+}
+
+form input#name,
+form input#email,
+form input#subject {
+  width: 400px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;  
+     -moz-border-radius: 3px;  
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+form textarea#message {
+  width: 500px;
+  height: 200px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;  
+     -moz-border-radius: 3px;  
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+form input#submit {
+  display: block;
+  padding: 10px;
+  font-size: 13pt;
+}
+
+/* Message flashing */
+.flash {
+  background-color: #FBB0B0;
+  border: 1px solid red;
+  padding: 10px;
+  width: 520px;
+  margin: 1em 0;
+  text-align: left;
+}
+
+p.subtitle {
+  text-align: center;
+
+}
+
+p.footnote {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #dedede;
+}
