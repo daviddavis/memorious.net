@@ -54,7 +54,7 @@ body::before {
 }
 
 .page {
-  max-width: 44rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: clamp(1rem, 3vw, 3rem) clamp(1.25rem, 5vw, 3.5rem);
   background-color: var(--card);
@@ -139,22 +139,22 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1.5rem, 8vw, 3rem);
   height: 2.5rem;
   margin-top: 1.75rem;
 }
 
+/* Width tracks each glyph so the gaps fall between the icons themselves; a
+   fixed width would inset narrower icons and widen their neighbouring gaps. */
 .links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
   height: 2.5rem;
   font-size: 2.6rem;
   line-height: 1;
   color: var(--ink-soft);
   text-decoration: none;
-  border-radius: 50%;
   transition: color .2s ease, transform .2s ease;
 }
 
@@ -167,6 +167,14 @@ h1 {
 .links a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.icon-link svg {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+  margin-left: -0.4rem;
+  fill: currentColor;
 }
 
 /* Ornamental divider */
@@ -239,6 +247,143 @@ h1 {
 
   .passage p::before {
     margin-left: -.15em;
+  }
+}
+
+/* Stories page */
+
+.page-head {
+  text-align: center;
+}
+
+.breadcrumb {
+  margin: 0;
+  font-size: .9rem;
+  letter-spacing: .06em;
+}
+
+.breadcrumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus-visible {
+  color: var(--accent);
+}
+
+.page-head h1 {
+  margin: .75rem 0 .35rem;
+  font-size: clamp(1.9rem, 5.5vw, 2.9rem);
+}
+
+.intro {
+  max-width: 32rem;
+  margin: .75rem auto 0;
+  font-style: italic;
+  font-size: 1.3rem;
+  letter-spacing: .02em;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.portrait {
+  margin: 1.5rem auto .5rem;
+}
+
+.portrait img {
+  display: block;
+  width: 11rem;
+  height: auto;
+  margin: 0 auto;
+  opacity: .88;
+}
+
+/* Black artwork on transparency: inverting it reads as a photo negative, so in
+   dark mode it sits on a warm plate instead, like a print pinned to the page. */
+@media (prefers-color-scheme: dark) {
+  .portrait img {
+    background-color: #ded3bc;
+    padding: .7rem .7rem .4rem;
+    border-radius: 2px;
+    opacity: .82;
+  }
+}
+
+.portrait figcaption {
+  margin-top: .4rem;
+  font-size: .8rem;
+  font-style: italic;
+  letter-spacing: .06em;
+  color: var(--ink-soft);
+}
+
+.shelf {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  align-items: center;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.story:first-child {
+  border-top: none;
+  padding-top: .5rem;
+}
+
+.story-art {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .95;
+}
+
+.story-body h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.byline {
+  margin: .3rem 0 1rem;
+  font-style: italic;
+  font-size: .9rem;
+  letter-spacing: .06em;
+  color: var(--ink-soft);
+}
+
+.story-body p {
+  margin: 0 0 .9rem;
+}
+
+.story-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pulled quote from the story itself. */
+.line {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 34rem) {
+  .story {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: left;
+  }
+
+  .story-art {
+    width: min(15rem, 85%);
   }
 }
 

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="t">
+  <title id="t">Nested hexagonal galleries receding into depth</title>
+  <style>
+    svg { color: #6b6154; }
+    @media (prefers-color-scheme: dark) { svg { color: #a2947c; } }
+  </style>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round">
+    <polygon points="100,18 171,59 171,141 100,182 29,141 29,59"/>
+    <polygon points="100,44 148,72 148,128 100,156 52,128 52,72" opacity=".8"/>
+    <polygon points="100,66 129,83 129,117 100,134 71,117 71,83" opacity=".6"/>
+    <polygon points="100,82 118,92 118,108 100,118 82,108 82,92" opacity=".45"/>
+
+    <g stroke-width="1" opacity=".55">
+      <line x1="100" y1="18" x2="100" y2="82"/>
+      <line x1="171" y1="59" x2="118" y2="92"/>
+      <line x1="171" y1="141" x2="118" y2="108"/>
+      <line x1="100" y1="182" x2="100" y2="118"/>
+      <line x1="29" y1="141" x2="82" y2="108"/>
+      <line x1="29" y1="59" x2="82" y2="92"/>
+    </g>
+
+    <g stroke-width="1" opacity=".75">
+      <line x1="43" y1="67" x2="43" y2="133"/>
+      <line x1="57" y1="75" x2="57" y2="125"/>
+      <line x1="143" y1="67" x2="143" y2="133"/>
+      <line x1="157" y1="75" x2="157" y2="125"/>
+    </g>
+
+    <circle cx="100" cy="100" r="5" opacity=".9"/>
+    <circle cx="100" cy="100" r="1.8" fill="currentColor" stroke="none"/>
+  </g>
+</svg>

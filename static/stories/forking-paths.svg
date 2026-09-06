@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="t">
+  <title id="t">A single path forking again and again</title>
+  <style>
+    svg { color: #6b6154; }
+    @media (prefers-color-scheme: dark) { svg { color: #a2947c; } }
+  </style>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <path d="M100 186v-32"/>
+
+    <path d="M100 154C100 132 76 130 62 116"/>
+    <path d="M100 154c0-22 24-24 38-38"/>
+
+    <path d="M62 116c-12-12-30-10-30-28"/>
+    <path d="M62 116c8-14 22-10 26-28"/>
+    <path d="M138 116c-8-14-22-10-26-28"/>
+    <path d="M138 116c12-12 30-10 30-28"/>
+
+    <g opacity=".7">
+      <path d="M32 88c0-14-12-18-14-30"/>
+      <path d="M32 88c4-12 16-14 16-28"/>
+      <path d="M88 88c-4-12-16-14-16-28"/>
+      <path d="M88 88c6-10 4-20 12-26"/>
+      <path d="M112 88c-6-10-4-20-12-26"/>
+      <path d="M112 88c4-12 16-14 16-28"/>
+      <path d="M168 88c-4-12-16-14-16-28"/>
+      <path d="M168 88c0-14 12-18 14-30"/>
+    </g>
+
+    <g fill="currentColor" stroke="none">
+      <circle cx="100" cy="154" r="3.2"/>
+      <circle cx="62" cy="116" r="2.6"/>
+      <circle cx="138" cy="116" r="2.6"/>
+      <circle cx="32" cy="88" r="2"/>
+      <circle cx="88" cy="88" r="2"/>
+      <circle cx="112" cy="88" r="2"/>
+      <circle cx="168" cy="88" r="2"/>
+    </g>
+
+    <g opacity=".45" stroke-width="1">
+      <circle cx="18" cy="58" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="48" cy="60" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="72" cy="60" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="100" cy="62" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="128" cy="60" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="152" cy="60" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="182" cy="58" r="1.6" fill="currentColor" stroke="none"/>
+    </g>
+  </g>
+</svg>
