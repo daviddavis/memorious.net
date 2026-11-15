@@ -132,51 +132,6 @@ h1 {
   color: var(--ink-soft);
 }
 
-/* Elsewhere links */
-
-/* Fixed height keeps the row's footprint constant no matter how large the glyphs get. */
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1.5rem, 8vw, 3rem);
-  height: 2.5rem;
-  margin-top: 1.75rem;
-}
-
-/* Width tracks each glyph so the gaps fall between the icons themselves; a
-   fixed width would inset narrower icons and widen their neighbouring gaps. */
-.links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  font-size: 2.6rem;
-  line-height: 1;
-  color: var(--ink-soft);
-  text-decoration: none;
-  transition: color .2s ease, transform .2s ease;
-}
-
-.links a:hover,
-.links a:focus-visible {
-  color: var(--accent);
-  transform: translateY(-2px);
-}
-
-.links a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.icon-link svg {
-  display: block;
-  height: 2.5rem;
-  width: auto;
-  margin-left: -0.4rem;
-  fill: currentColor;
-}
-
 /* Ornamental divider */
 
 .ornament {
@@ -198,83 +153,10 @@ h1 {
   stroke: none;
 }
 
-/* The passage */
-
-.passage {
-  margin: 0;
-}
-
-.passage p {
-  margin: 0;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-}
-
-.passage p::before {
-  content: open-quote;
-  float: left;
-  margin: .12em 0 0 -.45em;
-  font-size: 3.2em;
-  line-height: .72;
-  color: var(--rule);
-}
-
-.passage p::after {
-  content: close-quote;
-}
-
-.attribution {
-  margin-top: 1.75rem;
-  text-align: right;
-  font-size: 1.2rem;
-  letter-spacing: .06em;
-  color: var(--ink-soft);
-}
-
-.attribution::before {
-  content: "\2014\00a0";
-}
-
-.attribution cite {
-  font-style: normal;
-}
-
-@media (max-width: 34rem) {
-  .passage p {
-    text-align: left;
-  }
-
-  .passage p::before {
-    margin-left: -.15em;
-  }
-}
-
-/* Stories page */
+/* Stories */
 
 .page-head {
   text-align: center;
-}
-
-.breadcrumb {
-  margin: 0;
-  font-size: .9rem;
-  letter-spacing: .06em;
-}
-
-.breadcrumb a {
-  color: var(--ink-soft);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover,
-.breadcrumb a:focus-visible {
-  color: var(--accent);
-}
-
-.page-head h1 {
-  margin: .75rem 0 .35rem;
-  font-size: clamp(1.9rem, 5.5vw, 2.9rem);
 }
 
 .intro {
