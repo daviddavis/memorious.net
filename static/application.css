@@ -227,7 +227,7 @@ h1 {
   opacity: .95;
 }
 
-.story-body h2 {
+.story-body h3 {
   margin: 0;
   font-weight: 600;
   font-size: 1.5rem;
@@ -266,6 +266,97 @@ h1 {
 
   .story-art {
     width: min(15rem, 85%);
+  }
+}
+
+/* The section heading only shows in the two-column layout; on narrow screens
+   the ornament already introduces the list, so it is kept for screen readers. */
+.stories-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Desktop: labyrinth, portrait and intro in a left column; stories on the right. */
+@media (min-width: 64rem) {
+  .page {
+    max-width: 80rem;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr) minmax(0, 1.8fr);
+    column-gap: clamp(2rem, 3vw, 3rem);
+    align-items: start;
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+
+  /* scroll-sync.js drifts the sidebar down as the page scrolls so both
+     columns reach their ends together. Without it (no JS, reduced motion),
+     the sidebar simply sticks in view when it fits. */
+  :root.scroll-sync .sidebar {
+    will-change: transform;
+  }
+
+  @media (min-height: 52rem) {
+    :root:not(.scroll-sync) .sidebar {
+      position: sticky;
+      top: 3rem;
+    }
+  }
+
+  .ornament-break {
+    display: none;
+  }
+
+  .stories {
+    padding-left: clamp(2rem, 3vw, 3rem);
+    border-left: 1px solid var(--rule);
+  }
+
+  .stories-heading {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    margin: .5rem 0 0;
+    padding-bottom: .9rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .story:first-child {
+    padding-top: 2.25rem;
+  }
+
+  .story {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+
+  /* The sidebar is narrower than the old single column, so the nameplate
+     tightens up to keep the title on one line. */
+  .nameplate {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 2.8vw, 2.9rem);
+  }
+
+  .tagline {
+    font-size: 1.4rem;
+  }
+
+  .intro {
+    font-size: 1.4rem;
   }
 }
 
