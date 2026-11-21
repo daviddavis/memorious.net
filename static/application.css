@@ -348,7 +348,7 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.2rem, 2.8vw, 2.9rem);
+    font-size: clamp(2.6rem, 3.6vw, 3.3rem);
   }
 
   .tagline {
